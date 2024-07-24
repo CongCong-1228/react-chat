@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div className=''>
+    <div className='container'>
       firebase
     </div>
   )
