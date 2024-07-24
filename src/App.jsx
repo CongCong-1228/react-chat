@@ -1,7 +1,10 @@
+import Layout from "@/layout/layout.jsx";
+
+
 const App = () => {
   return (
     <div className='container'>
-      firebase
+      <Layout/>
     </div>
   )
 }

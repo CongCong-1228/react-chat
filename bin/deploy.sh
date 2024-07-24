@@ -7,7 +7,7 @@ cd dist
 git init
 git add .
 git commit -m depoly
-git remote add origin git@github.com:CongCong-1228/react-chat-preview.git
+git remote add origin https://github.com/CongCong-1228/react-chat-preview.git
 git push -f origin master:master
 
 
