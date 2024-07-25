@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './userInfo.module.less'
-import avatar from 'public/images/avatar.png'
-import more from 'public/images/more.png'
-import video from 'public/images/video.png'
-import edit from 'public/images/edit.png'
+import avatar from '/images/avatar.png'
+import more from '/images/more.png'
+import video from '/images/video.png'
+import edit from '/images/edit.png'
 
 const UserInfo = () => {
     return (
