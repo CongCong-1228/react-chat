@@ -1,4 +1,4 @@
-import React, {forwardRef, useEffect, useRef} from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import EmojiPicker from "emoji-picker-react";
 
 const EmojiPickerComponent = forwardRef((props, ref) => {
@@ -17,9 +17,7 @@ const EmojiPickerComponent = forwardRef((props, ref) => {
     }
 
     return (
-        <div ref={emojiPickerRef}>
-            <EmojiPicker {...props} />
-        </div>
+        <EmojiPicker { ...props } ref={ emojiPickerRef }/>
     );
 });
 

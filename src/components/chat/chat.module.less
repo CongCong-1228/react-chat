@@ -2,7 +2,8 @@
   border-left: 1px solid #dddddd35;
   border-right: 1px solid #dddddd35;
   height: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 
   .top {
     display: flex;
@@ -55,7 +56,6 @@
 
   .center {
     flex: 1;
-    height: 200px;
   }
 
   .bottom {
@@ -65,9 +65,6 @@
     justify-content: space-between;
     padding: 20px;
     border-top: 1px solid #dddddd35;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 
     img {
       height: 20px;
@@ -95,7 +92,13 @@
     }
 
     .emoji {
+        position: relative;
 
+        .picker {
+          position: absolute;
+          bottom: 50px;
+          left: 0;
+        }
     }
 
     .sendButton {
