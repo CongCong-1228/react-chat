@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './chat.module.less'
 import avatar from '/images/avatar.png'
 import phone from '/images/phone.png'
@@ -28,7 +28,6 @@ const Chat = () => {
             // 阻止冒泡，防止点到自身元素也触发
             e.stopPropagation()
         }
-        console.log('picker', picker.current)
     }
 
     useEffect(() => {
@@ -38,37 +37,107 @@ const Chat = () => {
         }
     })
     return (
-        <div className={styles.chat}>
-            <div className={styles.top}>
-                <div className={styles.user}>
-                    <img src={avatar} alt=""/>
-                    <div className={styles.texts}>
+        <div className={ styles.chat }>
+            <div className={ styles.top }>
+                <div className={ styles.user }>
+                    <img src={ avatar } alt=""/>
+                    <div className={ styles.texts }>
                         <span>Yang Yu Yu</span>
                         <p>I like Cong Cong</p>
                     </div>
                 </div>
-                <div className={styles.icons}>
-                    <img src={phone} alt="phone"/>
-                    <img src={video} alt="video"/>
-                    <img src={info} alt="info"/>
+                <div className={ styles.icons }>
+                    <img src={ phone } alt="phone"/>
+                    <img src={ video } alt="video"/>
+                    <img src={ info } alt="info"/>
                 </div>
             </div>
-            <div className={styles.center}></div>
-            <div className={styles.bottom}>
-                <div className={styles.icons}>
-                    <img src={imgIcon} alt="imgIcon"/>
-                    <img src={camera} alt="camera"/>
-                    <img src={mic} alt="mic"/>
-                </div>
-                <input className={styles.messageInput} type="text" placeholder="Type a Message" value={text}
-                       onChange={(e) => setText(e.target.value)}/>
-                <div className={styles.emoji}>
-                    <img src={emoji} alt="emoji" onClick={() => setShowEmojiPicker((prev) => !prev)}/>
-                    <div className={styles.picker} ref={picker}>
-                        <EmojiPicker open={showEmojiPicker} onEmojiClick={handleSelectEmoji}/>
+            <div className={ styles.center }>
+                <div className={ styles.message }>
+                    <img src={ avatar } alt=""/>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
                     </div>
                 </div>
-                <button className={styles.sendButton}>Send</button>
+                <div className={ `${ styles.message } ${ styles.own }` }>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ styles.message }>
+                    <img src={ avatar } alt=""/>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ `${ styles.message } ${ styles.own }` }>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ styles.message }>
+                    <img src={ avatar } alt=""/>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ `${ styles.message } ${ styles.own }` }>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ styles.message }>
+                    <img src={ avatar } alt=""/>
+                    <div className={ styles.texts }>
+                        <p>
+                            你好，孙聪，我是杨郁郁实打实的安师大大师的安师大安师大按时打算打算大师的安师大安师大是哒哒哒打啊
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+                <div className={ `${ styles.message } ${ styles.own }` }>
+                    <div className={ styles.texts }>
+                        <img src="https://images.pexels.com/photos/2709563/pexels-photo-2709563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                        <p>
+                            你好，孙聪，我是杨郁郁
+                        </p>
+                        <span>1 min ago</span>
+                    </div>
+                </div>
+            </div>
+            <div className={ styles.bottom }>
+                <div className={ styles.icons }>
+                    <img src={ imgIcon } alt="imgIcon"/>
+                    <img src={ camera } alt="camera"/>
+                    <img src={ mic } alt="mic"/>
+                </div>
+                <input className={ styles.messageInput } type="text" placeholder="Type a Message" value={ text }
+                       onChange={ (e) => setText(e.target.value) }/>
+                <div className={ styles.emoji }>
+                    <img src={ emoji } alt="emoji" onClick={ () => setShowEmojiPicker((prev) => !prev) }/>
+                    <div className={ styles.picker } ref={ picker }>
+                        <EmojiPicker open={ showEmojiPicker } onEmojiClick={ handleSelectEmoji }/>
+                    </div>
+                </div>
+                <button className={ styles.sendButton }>Send</button>
             </div>
         </div>
     );

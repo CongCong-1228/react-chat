@@ -1,9 +1,10 @@
 .chat {
-  border-left: 1px solid #dddddd35;
-  border-right: 1px solid #dddddd35;
+  border-left: 1px solid #dddddd15;
+  border-right: 1px solid #dddddd15;
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .top {
     display: flex;
@@ -11,7 +12,7 @@
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
-    border-bottom: 1px solid #dddddd35;
+    border-bottom: 1px solid #dddddd15;
 
     .user {
       display: flex;
@@ -56,6 +57,63 @@
 
   .center {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 20px;
+
+    .message {
+      display: flex;
+      gap: 20px;
+      max-width: 70%;
+      flex: 1;
+
+
+      &.own {
+        align-self: flex-end;
+
+        .own {
+          order: 1;
+        }
+
+        .texts {
+          order: 0;
+          p {
+            background-color: #3399ff;
+          }
+        }
+      }
+
+      img {
+        height: 35px;
+        width: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p {
+          background-color: #29384a;
+          padding: 10px;
+          border-radius: 12px;;
+        }
+
+        span {
+          font-size: 13px;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 12px;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
   }
 
   .bottom {
@@ -64,7 +122,7 @@
     gap: 20px;
     justify-content: space-between;
     padding: 20px;
-    border-top: 1px solid #dddddd35;
+    border-top: 1px solid #dddddd15;
 
     img {
       height: 20px;
@@ -93,6 +151,7 @@
 
     .emoji {
         position: relative;
+        display: flex;
 
         .picker {
           position: absolute;
