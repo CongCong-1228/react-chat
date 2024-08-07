@@ -13,4 +13,12 @@ export default defineConfig({
       '@styles': resolve(__dirname, 'src/styles'),
     }
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "${resolve(__dirname, 'src/assets/styles/variables.less')}";`,
+        javascriptEnabled: true
+      }
+    }
+  }
 })
