@@ -6,7 +6,7 @@ import Chat from "@components/chat/chat.jsx";
 import Login from "../components/login/login.jsx";
 
 const Layout = () => {
-  const user = false;
+  const user = true;
 
   return user ? (
     <div className="layout">
