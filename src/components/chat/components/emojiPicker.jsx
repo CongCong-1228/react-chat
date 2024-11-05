@@ -1,24 +1,22 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from "react";
 import EmojiPicker from "emoji-picker-react";
 
 const EmojiPickerComponent = forwardRef((props, ref) => {
-    const emojiPickerRef = useRef(null);
+  const emojiPickerRef = useRef(null);
 
-    useEffect(() => {
-        document.addEventListener('mousedown', handleCloseEmojiPicker);
-        return () => {
-            document.removeEventListener('mousedown', handleCloseEmojiPicker)
-        }
-    }, []);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleCloseEmojiPicker);
+    return () => {
+      document.removeEventListener("mousedown", handleCloseEmojiPicker);
+    };
+  }, []);
 
-    const handleCloseEmojiPicker = (event) => {
-        console.log('event', event.target)
-        console.log('emojiPickerRef', emojiPickerRef.current)
-    }
+  const handleCloseEmojiPicker = (event) => {
+    console.log("event", event.target);
+    console.log("emojiPickerRef", emojiPickerRef.current);
+  };
 
-    return (
-        <EmojiPicker { ...props } ref={ emojiPickerRef }/>
-    );
+  return <EmojiPicker {...props} ref={emojiPickerRef} />;
 });
 
 export default EmojiPickerComponent;
